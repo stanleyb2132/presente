@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.hidden { display: none; }
+.screen {
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.screen.active {
+  display: flex;
+}
+
+/* Botões */
+button, .next-btn {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+button:hover, .next-btn:hover {
+  background: #ff85c1;
+  transform: scale(1.05);
+}
+
+/* Animação de digitação */
+.typing {
+  border-right: 3px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink 0.7s infinite;
+}
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink { 50% { border-color: transparent; } }
+
+/* Fade-in */
+.fade-in {
+  opacity: 0;
+  animation: fade 4s ease-in forwards;
+  animation-delay: 4.5s;
+}
+@keyframes fade { to { opacity: 1; } }
+
+/* Slideshow */
+.slideshow {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: 30px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.slideshow img {
+  width: 100%;
+  display: none;
+  border-radius: 15px;
+}
+.slideshow img.active {
+  display: block;
+  animation: fadePhoto 2s;
+}
+@keyframes fadePhoto { from { opacity: 0; } to { opacity: 1; } }
+
+/* Carta */
+.letter {
+  background: rgba(255,255,255,0.95);
+  color: #2a2a2a;
+  padding: 25px;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 500px;
+  font-size: 1.2em;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  animation: fade 2s ease-in;
+}
+.letter h2 {
+  text-align: center;
+  color: #1e3c72;
+}
+
+/* Corações */
+.heart {
+  position: fixed;
+  top: -10px;
+  color: #ff69b4;
+  font-size: 24px;
+  animation: fall linear forwards;
+  z-index: 999;
+}
+@keyframes fall {
+  to { transform: translateY(100vh); opacity: 0; }
+}

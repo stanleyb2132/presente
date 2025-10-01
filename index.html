@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para você 💙</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- TELA 1 - Início -->
+  <div id="screen1" class="screen active">
+    <h1>Tenho algo especial pra você 💖</h1>
+    <button id="toPhotos">Clique para abrir a surpresa 💙</button>
+  </div>
+
+  <!-- TELA 2 - Fotos -->
+  <div id="screen2" class="screen hidden">
+    <h1 class="typing">Oi amor 💖, eu tenho algo pra te dizer...</h1>
+    <h2 class="fade-in">Eu te amo, Sophia 💙</h2>
+
+    <div class="slideshow">
+      <img src="fotos/foto1.jpg" class="active">
+      <img src="fotos/foto2.jpg">
+      <img src="fotos/foto3.jpg">
+    </div>
+
+    <button id="toLetter" class="next-btn">Abrir a carta 💌</button>
+    <button onclick="goToScreen ('screen1')" >Voltar para a tela inicial</button>
+  </div>
+
+  <!-- TELA 3 - Carta -->
+  <div id="screen3" class="screen hidden">
+    <div class="letter">
+      <h2>Minha carta para você 💙</h2>
+      <p>
+        Amor, você é a melhor parte dos meus dias.<br>
+        Obrigado por estar comigo, por me fazer sorrir e por me amar do jeitinho que eu sou.<br><br>
+        Quero viver muitos momentos lindos ao seu lado, hoje, amanhã e sempre. 💖<br>
+        Eu te amo, Sophia, infinitamente! 💙
+        Amor, você é a melhor parte dos meus dias.<br>
+        Obrigado por estar comigo, por me fazer sorrir e por me amar do jeitinho que eu sou.<br><br>
+        Quero viver muitos momentos lindos ao seu lado, hoje, amanhã e sempre. 💖<br>
+        Eu te amo, Sophia, infinitamente! 💙
+        Amor, você é a melhor parte dos meus dias.<br>
+        Obrigado por estar comigo, por me fazer sorrir e por me amar do jeitinho que eu sou.<br><br>
+        Quero viver muitos momentos lindos ao seu lado, hoje, amanhã e sempre. 💖<br>
+        Eu te amo, Sophia, infinitamente! 💙
+        Amor, você é a melhor parte dos meus dias.<br>
+        Obrigado por estar comigo, por me fazer sorrir e por me amar do jeitinho que eu sou.<br><br>
+        Quero viver muitos momentos lindos ao seu lado, hoje, amanhã e sempre. 💖<br>
+        Eu te amo, Sophia, infinitamente! 💙
+        Amor, você é a melhor parte dos meus dias.<br>
+        Obrigado por estar comigo, por me fazer sorrir e por me amar do jeitinho que eu sou.<br><br>
+        Quero viver muitos momentos lindos ao seu lado, hoje, amanhã e sempre. 💖<br>
+        Eu te amo, Sophia, infinitamente! 💙Amor, você é a melhor parte dos meus dias.<br>
+        Obrigado por estar comigo, por me fazer sorrir e por me amar do jeitinho que eu sou.<br><br>
+        Quero viver muitos momentos lindos ao seu lado, hoje, amanhã e sempre. 💖<br>
+        Eu te amo, Sophia, infinitamente! 💙Amor, você é a melhor parte dos meus dias.<br>
+        Obrigado por estar comigo, por me fazer sorrir e por me amar do jeitinho que eu sou.<br><br>
+        Quero viver muitos momentos lindos ao seu lado, hoje, amanhã e sempre. 💖<br>
+        Eu te amo, Sophia, infinitamente! 💙Amor, você é a melhor parte dos meus dias.<br>
+        Obrigado por estar comigo, por me fazer sorrir e por me amar do jeitinho que eu sou.<br><br>
+        Quero viver muitos momentos lindos ao seu lado, hoje, amanhã e sempre. 💖<br>
+        Eu te amo, Sophia, infinitamente! 💙
+      </p>
+      <button onclick="goToScreen ('screen2')">Voltar</button>
+    </div>
+  </div>
+
+  <!-- Música -->
+  <audio id="music" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
