@@ -3,10 +3,12 @@ const screen1 = document.getElementById("screen1");
 const screen2 = document.getElementById("screen2");
 const screen3 = document.getElementById("screen3");
 const music = document.getElementById("music");
+const letterOpening = document.getElementById("letterOpening");
+const openEnvelope = document.getElementById("openEnvelope");
 
-function goToScreen(screen2) {
+function goToScreen(screenId) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  document.getElementById(screen2).classList.add('active');
+  document.getElementById(screenId).classList.add('active');
 }
 
 document.getElementById("toPhotos").addEventListener("click", () => {
@@ -16,7 +18,16 @@ document.getElementById("toPhotos").addEventListener("click", () => {
   music.play();
 });
 
+// Navegação para Carta com animação
 document.getElementById("toLetter").addEventListener("click", () => {
+  // Mostrar animação de carta abrindo
+  letterOpening.classList.add("active");
+});
+
+// Fechar animação da carta e ir para tela da carta
+openEnvelope.addEventListener("click", () => {
+  // Fechar animação e ir para a tela da carta
+  letterOpening.classList.remove("active");
   screen2.classList.remove("active");
   screen2.classList.add("hidden");
   screen3.classList.add("active");
@@ -44,3 +55,8 @@ function createHeart() {
   setTimeout(() => { heart.remove(); }, 5000);
 }
 setInterval(createHeart, 500);
+
+// Iniciar alguns corações imediatamente
+for (let i = 0; i < 10; i++) {
+  setTimeout(() => createHeart(), i * 200);
+}
